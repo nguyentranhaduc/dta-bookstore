@@ -15,6 +15,7 @@
   <li>
     <p><strong>Server: Node.js (Express)</strong></p>
     <img width="300px" src="https://raw.githubusercontent.com/nguyentranhaduc/dta-bookstore/main/images/nodejs.png" />
+    <img width="300px" src="https://raw.githubusercontent.com/nguyentranhaduc/dta-bookstore/main/images/expressjs.png" />
   </li>
   <br />
 
