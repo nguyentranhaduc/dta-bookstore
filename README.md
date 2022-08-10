@@ -1,7 +1,5 @@
 # DTA Bookstore
 
-Đồ án môn học lập trình ứng dụng trên thiết bị di động
-
 ## Giới thiệu
 
 <p style="list-style: inside;">Công nghệ áp dụng</p>
