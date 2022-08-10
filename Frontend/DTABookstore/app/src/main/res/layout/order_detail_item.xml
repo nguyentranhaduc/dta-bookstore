@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/ma_san_pham_title_textView"
+        android:layout_width="wrap_content"
+        android:text="Mã sản phẩm: "
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/ma_don_hang_textView"
+        android:layout_width="wrap_content"
+        android:text="61ac7e54d5dab06185878653"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/so_luong_title_textView"
+        android:layout_width="wrap_content"
+        android:text="Số lượng: "
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/ma_san_pham_title_textView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/so_luong_textView"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="9"
+        app:layout_constraintTop_toBottomOf="@+id/ma_don_hang_textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/so_luong_title_textView"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileFragment">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/green_900"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+                app:menu="@menu/profile_top_app_bar"
+                app:title="Hồ sơ"
+                app:titleCentered="true"
+                app:titleTextAppearance="?attr/textAppearanceHeadline6"
+                app:titleTextColor="@color/white" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!-- Note: A RecyclerView can also be used -->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <!-- Scrollable content -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/light_green_200"
+                    android:paddingBottom="100dp">
+
+                    <ImageView
+                        android:id="@+id/background"
+                        android:layout_width="wrap_content"
+                        android:layout_height="180dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/green_background"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/profile_image"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="50dp"
+                        android:src="@drawable/tool_user_image"
+                        app:civ_border_color="#FFFFFF"
+                        app:civ_border_width="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/background" />
+
+                    <TextView
+                        android:id="@+id/user_name_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textAppearance="?attr/textAppearanceDisplaySmall"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+
+                    <TextView
+                        android:id="@+id/user_mail_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?attr/textAppearanceBodyLarge"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/user_name_textView" />
+
+                    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                        android:id="@+id/xem_lich_su_mua_hang_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|end"
+                        android:layout_margin="10dp"
+                        android:backgroundTint="@color/white"
+                        android:text="Đơn hàng của tôi"
+                        android:textColor="@color/green_900"
+                        app:icon="@drawable/ic_receipt"
+                        app:iconTint="@color/green_900"
+                        app:layout_constraintEnd_toStartOf="@+id/san_pham_yeu_thich"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/user_mail_textView" />
+
+                    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                        android:id="@+id/san_pham_yeu_thich"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|end"
+                        android:layout_margin="10dp"
+                        android:backgroundTint="@color/white"
+                        android:text="Sản phẩm yêu thích"
+                        android:textColor="@color/green_900"
+                        app:icon="@drawable/ic_favorite"
+                        app:iconTint="@color/pink_600"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/xem_lich_su_mua_hang_button"
+                        app:layout_constraintTop_toBottomOf="@+id/user_mail_textView" />
+
+                    <FrameLayout
+                        android:id="@+id/thong_tin_FrameLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/bo_tron_goc"
+                        app:layout_constraintTop_toBottomOf="@+id/xem_lich_su_mua_hang_button">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_gravity="start"
+                                android:layout_width="wrap_content"
+                                android:text="Thông tin tài khoản"
+                                android:textStyle="bold"
+                                android:textColor="@color/light_green_900"
+                                android:padding="10dp"
+                                android:layout_height="match_parent"/>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/ho_ten"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:startIconDrawable="@drawable/ic_person">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/full_name_editText"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:singleLine="true" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/dien_thoai"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:startIconDrawable="@drawable/ic_phone">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/phone_editText"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="phone"
+                                    android:singleLine="true"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/mail"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:startIconDrawable="@drawable/ic_mail">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/email_editText"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="textEmailAddress"
+                                    android:singleLine="true"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/dia_chi"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:startIconDrawable="@drawable/ic_my_location">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/address_editText"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:singleLine="true"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <Button
+                                android:id="@+id/cap_nhat_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_gravity="center"
+                                android:text="Cập nhật hồ sơ" />
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:layout_constraintBottom_toTopOf="@+id/dang_xuat_button"
+                        android:layout_height="wrap_content"/>
+
+                        <Button
+                            app:layout_constraintTop_toBottomOf="@+id/thong_tin_FrameLayout"
+                            android:id="@+id/dang_xuat_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:backgroundTint="@color/red_700"
+                            android:layout_marginTop="30dp"
+                            android:text="Đăng xuất" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

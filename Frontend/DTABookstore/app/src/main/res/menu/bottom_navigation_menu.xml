@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_home"
+        android:title="@string/trang_chu"/>
+
+    <item
+        android:id="@+id/categoryFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_category"
+        android:title="Thể loại"/>
+
+    <item
+        android:id="@+id/searchFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_search"
+        android:title="@string/tim_kiem"/>
+
+    <item
+        android:id="@+id/notificationFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_notification"
+        android:title="Thông báo"/>
+
+
+    <item
+        android:id="@+id/profileFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_person"
+        android:title="@string/ca_nhan"/>
+
+</menu>

@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">DTA Bookstore</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--    SignInSignUp layout-->
+    <string name="ten_app">Nhà sách DTA</string>
+    <string name="chao_mung">Welcome to DTA Bookstore</string>
+    <string name="dang_nhap">đăng nhập</string>
+    <string name="dang_ky">đăng ký</string>
+    <string name="chinh_sach"><u>Điều khoản sử dụng và chính sách bảo mật</u></string>
+
+    <!--    SignUp layout-->
+    <string name="your_name">Họ tên</string>
+    <string name="email">Địa chỉ email</string>
+    <string name="phone">Điện thoại di động</string>
+    <string name="password">Mật khẩu</string>
+    <string name="password_confirm">Xác nhận mật khẩu của bạn</string>
+    <string name="register">đăng ký</string>
+    <string name="dang_ky_tai_khoan">Đăng ký tài khoản</string>
+
+    <!--    SignIn layout-->
+    <string name="login_options">hoặc:</string>
+    <string name="khong_co_tai_khoan">Không có tài khoản? <u>Tạo ngay</u></string>
+    <string name="quen_mat_khau"><u>Quên mật khẩu?</u></string>
+    <string name="dang_nhap_tai_khoan">Đăng nhập tài khoản</string>
+
+    <!--  MainActivity  -->
+    <string name="trang_chu">Trang chủ</string>
+    <string name="ca_nhan">Cá nhân</string>
+    <string name="tim_kiem">Tìm kiếm</string>
+    <string name="thong_bao">Thông báo</string>
+
+    <!--  Profile fragment  -->
+    <string name="profile_xac_nhan_title">Xác nhận</string>
+    <string name="profile_xac_nhan_message">Bạn có muốn cập nhật thông tin?</string>
+    <string name="profile_dong_y">Đồng ý</string>
+    <string name="profile_huy_bo">Hủy bỏ</string>
+
+    <string name="detail_xac_nhan_title">Thêm vào giỏ hàng</string>
+    <string name="detail_xac_nhan_message">Bạn có muốn thêm sản phẩm <b>%1$s</b> với số lượng là <b>%2$s</b> vào giỏ hàng?</string>
+    <string name="detail_dong_y">Đồng ý</string>
+    <string name="detail_huy_bo">Hủy bỏ</string>
+</resources>
