@@ -31,10 +31,9 @@ app.use('/admin', adminRoutes);
 
 // Kết nối đến database mongodb
 mongoose
-  .connect(
-    // connection string ở đây
-    'mongodb+srv://haduc:haduc123@cluster0.bktuo.mongodb.net/dta-bookstore?retryWrites=true&w=majority'
-  )
+  .connect
+  // connection string ở đây
+  ()
   .then((result) => {
     // nếu kết nối thành công và trả về result
     console.log('Kết nối database thành công!');
